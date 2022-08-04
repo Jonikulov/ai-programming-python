@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from .Generaldistribution import Distribution
 
 class Gaussian(Distribution):
-	""" Gaussian distribution class for calculating and 
+
+	"""Gaussian distribution class for calculating and 
 	visualizing a Gaussian distribution.
 	
 	Attributes:
@@ -12,10 +13,10 @@ class Gaussian(Distribution):
 		data_list (list of floats) a list of floats extracted from the data file
 			
 	"""
+	
 	def __init__(self, mu=0, sigma=1):
 		
 		Distribution.__init__(self, mu, sigma)
-	
 		
 	
 	def calculate_mean(self):
@@ -29,13 +30,11 @@ class Gaussian(Distribution):
 			float: mean of the data set
 	
 		"""
-					
+		
 		avg = 1.0 * sum(self.data) / len(self.data)
-		
 		self.mean = avg
-		
-		return self.mean
 
+		return self.mean
 
 
 	def calculate_stdev(self, sample=True):
@@ -56,21 +55,19 @@ class Gaussian(Distribution):
 			n = len(self.data)
 	
 		mean = self.calculate_mean()
-	
 		sigma = 0
 	
 		for d in self.data:
 			sigma += (d - mean) ** 2
 		
 		sigma = math.sqrt(sigma / n)
-	
 		self.stdev = sigma
 		
 		return self.stdev
 		
 		
-		
 	def plot_histogram(self):
+
 		"""Function to output a histogram of the instance variable data using 
 		matplotlib pyplot library.
 		
@@ -80,14 +77,15 @@ class Gaussian(Distribution):
 		Returns:
 			None
 		"""
+
 		plt.hist(self.data)
 		plt.title('Histogram of Data')
 		plt.xlabel('data')
 		plt.ylabel('count')
-		
-		
+
 		
 	def pdf(self, x):
+
 		"""Probability density function calculator for the gaussian distribution.
 		
 		Args:
@@ -96,12 +94,13 @@ class Gaussian(Distribution):
 		
 		Returns:
 			float: probability density function output
+
 		"""
-		
+
 		return (1.0 / (self.stdev * math.sqrt(2*math.pi))) * math.exp(-0.5*((x - self.mean) / self.stdev) ** 2)
 		
 
-	def plot_histogram_pdf(self, n_spaces = 50):
+	def plot_histogram_pdf(self, n_spaces=50):
 
 		"""Function to plot the normalized histogram of the data and a plot of the 
 		probability density function along the same range
@@ -112,16 +111,16 @@ class Gaussian(Distribution):
 		Returns:
 			list: x values for the pdf plot
 			list: y values for the pdf plot
-			
+
 		"""
 		
-		mu = self.mean
-		sigma = self.stdev
+		# mu = self.mean
+		# sigma = self.stdev
 
 		min_range = min(self.data)
 		max_range = max(self.data)
-		
-		 # calculates the interval between x values
+
+		# calculates the interval between x values
 		interval = 1.0 * (max_range - min_range) / n_spaces
 
 		x = []
@@ -147,6 +146,7 @@ class Gaussian(Distribution):
 
 		return x, y
 		
+
 	def __add__(self, other):
 
 		"""Function to add together two Gaussian distributions

@@ -88,6 +88,6 @@ class TestBinomialClass(unittest.TestCase):
         self.assertEqual(binomial_sum.p, .4)
         self.assertEqual(binomial_sum.n, 80)
         
-    
+
 if __name__ == '__main__':
     unittest.main()
