@@ -16,6 +16,14 @@ class Binomial(Distribution):
 
     """
 
+    def __init__(self, prob=0.5, size=20):
+
+        self.n = size
+        self.p = prob
+        
+        Distribution.__init__(self, self.calculate_mean(), self.calculate_stdev())
+
+
     def calculate_mean(self):
 
         """Function to calculate the mean from p and n

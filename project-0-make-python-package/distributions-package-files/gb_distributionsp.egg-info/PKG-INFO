@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gb-distributionsp
+Version: 0.3
+Summary: Gaussian and Binomial distributions
+Home-page: UNKNOWN
+Author: Javohir Joniqulov
+Author-email: jonikulov.uz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+This package includes Gaussian and Binomial distributions.
+

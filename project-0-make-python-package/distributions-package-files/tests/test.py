@@ -1,13 +1,13 @@
-# Any changes to the distributions library should be reinstalled with
-#  pip install --upgrade .
+# Any changes to the gb_distributionsp library should be reinstalled with
+#  pip install --upgrade gb_distributionsp
 
 # For running unit tests, use
 # /usr/bin/python -m unittest test
 
 import unittest
 
-from distributions import Gaussian
-from distributions import Binomial
+from gb_distributionsp import Gaussian
+from gb_distributionsp import Binomial
 
 class TestGaussianClass(unittest.TestCase):
     def setUp(self):
