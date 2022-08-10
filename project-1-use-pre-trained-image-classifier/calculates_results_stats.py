@@ -65,7 +65,7 @@ def calculates_results_stats(results_dic):
                     a percentage or a count) where the key is the statistic's 
                      name (starting with 'pct' for percentage or 'n' for count)
                      and the value is the statistic's value. See comments above
-                     and the classroom Item XX Calculating Results for details
+                     and the previous topic Calculating Results in the class for details
                      on how to calculate the counts and statistics.
     """        
     # Replace None with the results_stats_dic dictionary that you created with 

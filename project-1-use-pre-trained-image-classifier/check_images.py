@@ -3,8 +3,8 @@
 # */AIPND-revision/intropyproject-classify-pet-images/check_images.py
 #
 # TODO 0: Add your information below for Programmer & Date Created.                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                  
+# PROGRAMMER: Javohir Joniqulov
+# DATE CREATED: 10/08/2022
 # REVISED DATE: 
 # PURPOSE: Classifies pet images using a pretrained CNN model, compares these
 #          classifications to the true identity of the pets in the images, and
@@ -20,7 +20,7 @@
 #      python check_images.py --dir <directory with images> --arch <model>
 #             --dogfile <file that contains dognames>
 #   Example call:
-#    python check_images_solution.py --dir pet_images/ --arch vgg --dogfile dognames.txt
+#    python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
 ##
 
 # Imports python modules
@@ -40,7 +40,7 @@ from print_results import print_results
 # Main program function defined below
 def main():
     # TODO 0: Measures total program runtime by collecting start time
-    start_time = time()
+    start_time = 
     
     # TODO 1: Define get_input_args function within the file get_input_args.py
     # This function retrieves 3 Command Line Arugments from user as input from
@@ -66,7 +66,7 @@ def main():
     check_creating_pet_image_labels(results)
 
 
-    # TODO 3: Define classify_images function within the file classify_images.py
+    # TODO 3: Define classify_images function within the file classiy_images.py
     # Once the classify_images function has been defined replace first 'None' 
     # in the function call with in_arg.dir and replace the last 'None' in the
     # function call with in_arg.arch  Once you have done the replacements your
@@ -116,10 +116,10 @@ def main():
     print_results(results, results_stats, None, True, True)
     
     # TODO 0: Measure total program runtime by collecting end time
-    end_time = time()
+    end_time =
     
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
-    tot_time = end_time - start_time
+    tot_time = #calculate difference between end time and start time
     print("\n** Total Elapsed Runtime:",
           str(int((tot_time/3600)))+":"+str(int((tot_time%3600)/60))+":"
           +str(int((tot_time%3600)%60)) )
