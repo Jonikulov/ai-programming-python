@@ -42,7 +42,7 @@ def get_pet_labels(image_dir):
     """
     file_names = listdir(image_dir)
     results_dic = {}
-    
+
     for fname in file_names:
         fname_list = fname.lower().split("_")
         results_dic[fname] = [fname_list[0]]
