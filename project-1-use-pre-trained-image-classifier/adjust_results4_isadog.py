@@ -76,13 +76,13 @@ def adjust_results4_isadog(results_dic, dogfile):
         # compare the dog names to the pet image labels in the results dictionary
         pet_label = results_dic[key][0]
         if pet_label in dognames:
-            results_dic[key][3].append(1)
+            results_dic[key].append(1)
         else:
-            results_dic[key][3].append(0)
+            results_dic[key].append(0)
 
         # compare the dog names to the classifier in the results dictionary
         classifier_label = results_dic[key][1]
         if classifier_label in dognames:
-            results_dic[key][4].append(1)
+            results_dic[key].append(1)
         else:
-            results_dic[key][4].append(0)
+            results_dic[key].append(0)
