@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
-#                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
-# REVISED DATE: 
+#
+# PROGRAMMER: Javohir Joniqulov
+# DATE CREATED: 11/08/2022
+# REVISED DATE:
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
 #          labels to the pet image labels. This function inputs:
@@ -28,7 +28,7 @@ from classifier import classifier
 #       Notice that this function doesn't return anything because the 
 #       results_dic dictionary that is passed into the function is a mutable 
 #       data type so no return is needed.
-# 
+#
 def classify_images(images_dir, results_dic, model):
     """
     Creates classifier labels with classifier function, compares pet labels to 
@@ -37,7 +37,7 @@ def classify_images(images_dir, results_dic, model):
     format the classifier labels so that they will match your pet image labels.
     The format will include putting the classifier labels in all lower case 
     letters and strip the leading and trailing whitespace characters from them.
-    For example, the Classifier function returns = 'Maltese dog, Maltese terrier, Maltese' 
+    For example, the Classifier function returns = 'Maltese dog, Maltese terrier, Maltese'
     so the classifier label = 'maltese dog, maltese terrier, maltese'.
     Recall that dog names from the classifier function can be a string of dog 
     names separated by commas when a particular breed of dog has multiple dog 
