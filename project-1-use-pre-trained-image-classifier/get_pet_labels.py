@@ -40,15 +40,29 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
+    # create list of files in directory
     file_names = listdir(image_dir)
+    # create empty dictionary for results
     results_dic = {}
 
-    for fname in file_names:
-        fname_list = fname.lower().split("_")
-        results_dic[fname] = [fname_list[0]]
-        for idx in range(1, len(fname_list)):
-            if fname_list[idx].isalpha():
-                results_dic[fname][0] += " " + fname_list[idx]
-    # Replace None with the results_dic dictionary that you created with this
-    # function
+    # iterate through each file in the directory
+    for file_name in file_names:
+
+        # skip file starts with .
+        if file_name[0] != ".":
+
+            # make a list variable to hold file name lower and split by _
+            file_name_list = file_name.lower().split("_")
+            # temporary label variable to hold pet extracted label name
+            pet_label = " ".join(
+                [label for label in file_name_list if label.isalpha()])
+
+            # check whether the file name doesn't already exist in dictionary
+            if file_name not in results_dic:
+                results_dic[file_name] = [pet_label]
+            # otherwise print an error message
+            else:
+                print("** Warning: Duplicate files exist in directory:",
+                file_name)
+
     return results_dic

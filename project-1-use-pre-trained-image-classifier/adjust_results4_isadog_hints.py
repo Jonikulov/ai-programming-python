@@ -86,7 +86,7 @@ def adjust_results4_isadog(results_dic, dogfile):
             #           from the variable line  
             #
             # Process line by striping newline from line
-            pass
+            line = line.strip()
 
             # TODO: 4b. REPLACE pass with CODE to check if the dogname(line) 
             #          exists within dognames_dic, then if the dogname(line) 
@@ -95,7 +95,8 @@ def adjust_results4_isadog(results_dic, dogfile):
             #
             # adds dogname(line) to dogsnames_dic if it doesn't already exist 
             # in the dogsnames_dic dictionary
-            pass 
+            if line not in dogsnames_dic:
+                dogsnames_dic[line] = 1
 
             # Reads in next line in file to be processed with while loop
             # if this line isn't empty (EOF)
